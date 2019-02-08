@@ -1,6 +1,10 @@
 import React from "react";
 
 class SearchBar extends React.Component {
+  onInputChange(event) {
+    console.log(event.target.value);
+  }
+
   render() {
     return (
       <div className="ui segment">
@@ -9,7 +13,7 @@ class SearchBar extends React.Component {
             <label className="ui center aligned header">
               <strong>Image Search</strong>
             </label>
-            <input type="text" />
+            <input type="text" onChange={this.onInputChange} />
           </div>
         </form>
       </div>
